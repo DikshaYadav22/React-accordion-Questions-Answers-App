@@ -7,10 +7,14 @@ import Questions from "./components/Questions";
 const App = () => {
   const [questions, setQuestions] = useState(data);
 
-  const [show, setShow] = useState(false);
+  const [activeId, setActiveId] = useState(false);
   return (
     <>
-      <Questions questions={questions} show={show} setShow={setShow} />
+      <Questions
+        questions={questions}
+        activeId={activeId}
+        setActiveId={setActiveId}
+      />
     </>
   );
 };
